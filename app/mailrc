@@ -1,0 +1,5 @@
+account default
+# ホスト名等が現状わからないため、一旦???と記述。
+host ???
+port ???
+from "service@d-prac.test|
