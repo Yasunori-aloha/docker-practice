@@ -16,3 +16,6 @@ RUN apt install -yqq msmtp msmtp-mta
 
 # msmtpの設定ファイルをホストマシンからコピー
 COPY ./app/mailrc /etc/msmtprc
+
+# 動作確認用コマンド群のインストール
+RUN apt install -y curl iputils-ping procps vim tree
