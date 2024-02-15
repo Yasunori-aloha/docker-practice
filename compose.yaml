@@ -1,0 +1,17 @@
+services:
+  app:
+    container_name: docker-practice-app
+    build:
+      context: .
+      dockerfile: app/Dockerfile
+    volumes:
+      - type: bind
+        source: ./src
+        target: /src
+    ports:
+      - "18000:8000"
+    command: php -S 0.0.0.0:8000 -t /src
+
+
+volumes:
+  docker-practice-db-volume:
