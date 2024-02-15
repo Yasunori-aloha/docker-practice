@@ -11,7 +11,23 @@ services:
     ports:
       - "18000:8000"
     command: php -S 0.0.0.0:8000 -t /src
-
+  db:
+    container_name: docker-practice-db
+    build:
+      context: .
+      dockerfile: db/Dockerfile
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpasword
+      - MYSQL_USER=yasunori
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=practice
+    volumes:
+      - type: volume
+        source: docker-practice-db-volume
+        target: /var/lib/mysql
+      - type: bind
+        source: ./db/init.sql
+        target: /docker-entrypoint-initdb.d/init.sql
 
 volumes:
   docker-practice-db-volume:
