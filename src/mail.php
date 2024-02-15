@@ -40,10 +40,10 @@ echo "<div style='width: 40rem; margin-top: 2rem; margin-left: auto; margin-righ
 
 $host = 'db';
 $port = '3306';
-$database = 'event';
+$database = 'practice';
 $dsn = sprintf('mysql:host=%s; port=%s; dbname=%s;', $host, $port, $database);
 
-$username = 'hoge';
+$username = 'yasunori';
 $password = 'password';
 
 $pdo = new PDO($dsn, $username, $password);
