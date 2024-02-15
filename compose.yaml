@@ -28,6 +28,12 @@ services:
       - type: bind
         source: ./db/init.sql
         target: /docker-entrypoint-initdb.d/init.sql
+  mail:
+    container_name: docker-practice-mail
+    image: mailhog/mailhog:v1.0.1
+    platform: linux/amd64
+    ports:
+      - "18025:8025"
 
 volumes:
   docker-practice-db-volume:
