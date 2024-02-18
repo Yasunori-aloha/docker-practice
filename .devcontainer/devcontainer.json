@@ -1,0 +1,6 @@
+{
+  "name": "Docker Practice",
+  "dockerComposeFile": "../compose.yaml",
+  "service": "workspace",
+  "workspaceFolder": "/"
+}
